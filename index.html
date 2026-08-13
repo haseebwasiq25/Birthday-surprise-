@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stars"></div>
+
+<section class="screen" id="start">
+  <div class="card">
+    <div class="gift">🎁</div>
+    <p class="tiny">I made something just for you...</p>
+    <h1>Tap to Open</h1>
+    <button id="openBtn">Open My Surprise 💗</button>
+  </div>
+</section>
+
+<section class="screen hidden" id="main">
+  <div class="confetti" id="confetti"></div>
+  <div class="balloons">
+    <span>🎈</span><span>🎈</span><span>🎈</span><span>🎈</span><span>🎈</span>
+  </div>
+
+  <div class="card main-card">
+    <p class="tiny">23 • 08 • 2026</p>
+    <h1>Happy Birthday, <span id="name">My Favorite Person</span> ❤️</h1>
+    <div class="cake">🎂</div>
+    <p class="message">
+      Today is more than just your birthday. It is a day I get to celebrate
+      the beautiful person who became such a special part of my life.
+      <br><br>
+      This is our <b>first birthday together</b>, and I hope it becomes one
+      of those little memories we smile about years from now. ✨
+    </p>
+
+    <button class="memoryBtn" data-title="One thing I love about you" data-text="Your presence can make an ordinary day feel special. ❤️">
+      💌 Open a little message
+    </button>
+    <button class="memoryBtn" data-title="A promise for today" data-text="I will do my best to make you feel valued, respected and appreciated—not only today, but every day. 🌷">
+      🌷 Another one
+    </button>
+    <button class="memoryBtn" data-title="Our first birthday" data-text="No matter how simple this surprise is, I wanted our first birthday memory to have a little piece of me in it. 🥹❤️">
+      🥹 One last thing
+    </button>
+
+    <div class="final">
+      <p>Make a wish... ✨</p>
+      <button id="wishBtn">🕯️ Blow the candles</button>
+      <div id="wishResult" class="hidden wish">May your smile always have a reason. ❤️</div>
+    </div>
+
+    <p class="signature">Made with ❤️ especially for you</p>
+  </div>
+</section>
+
+<div class="modal hidden" id="modal">
+  <div class="modalBox">
+    <button class="close" id="close">×</button>
+    <div class="modalHeart">💖</div>
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
