@@ -1,70 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You ❤️</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Her — 23 August ❤️</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="stars"></div>
+<div class="stars"></div>
+<div class="petals"></div>
 
-<section class="screen" id="start">
-  <div class="card">
-    <div class="gift">🎁</div>
-    <p class="tiny">I made something just for you...</p>
-    <h1>Tap to Open</h1>
-    <button id="openBtn">Open My Surprise 💗</button>
+<section id="intro" class="page">
+  <div class="intro-card">
+    <div class="small">A little surprise for someone special</div>
+    <div class="ring">♡</div>
+    <h1>Before you open this…</h1>
+    <p>I made a tiny world for your birthday.</p>
+    <button id="enter">Open your surprise ✨</button>
+    <div class="hint">Use headphones if you add your own song 🎧</div>
   </div>
 </section>
 
-<section class="screen hidden" id="main">
-  <div class="confetti" id="confetti"></div>
-  <div class="balloons">
-    <span>🎈</span><span>🎈</span><span>🎈</span><span>🎈</span><span>🎈</span>
-  </div>
+<main id="site" class="hidden">
+  <section class="hero page">
+    <div class="floating-heart">♡</div>
+    <div class="small">23 · 08 · 2026</div>
+    <h1>Happy Birthday,<br><span>My Favorite Person</span> 💗</h1>
+    <p class="lead">Today isn't just your birthday.<br>It's a little celebration of how lucky I feel to know you.</p>
+    <div class="scroll">↓ keep going ↓</div>
+  </section>
 
-  <div class="card main-card">
-    <p class="tiny">23 • 08 • 2026</p>
-    <h1>Happy Birthday, <span id="name">My Favorite Person</span> ❤️</h1>
-    <div class="cake">🎂</div>
-    <p class="message">
-      Today is more than just your birthday. It is a day I get to celebrate
-      the beautiful person who became such a special part of my life.
-      <br><br>
-      This is our <b>first birthday together</b>, and I hope it becomes one
-      of those little memories we smile about years from now. ✨
-    </p>
-
-    <button class="memoryBtn" data-title="One thing I love about you" data-text="Your presence can make an ordinary day feel special. ❤️">
-      💌 Open a little message
-    </button>
-    <button class="memoryBtn" data-title="A promise for today" data-text="I will do my best to make you feel valued, respected and appreciated—not only today, but every day. 🌷">
-      🌷 Another one
-    </button>
-    <button class="memoryBtn" data-title="Our first birthday" data-text="No matter how simple this surprise is, I wanted our first birthday memory to have a little piece of me in it. 🥹❤️">
-      🥹 One last thing
-    </button>
-
-    <div class="final">
-      <p>Make a wish... ✨</p>
-      <button id="wishBtn">🕯️ Blow the candles</button>
-      <div id="wishResult" class="hidden wish">May your smile always have a reason. ❤️</div>
+  <section class="page section">
+    <div class="section-label">01 · A little letter</div>
+    <div class="letter">
+      <div class="seal">♥</div>
+      <h2>For you, on your first birthday with me</h2>
+      <p>
+        I wanted to give you something you could keep, even if it's only on a screen.
+        So I made this little surprise because your first birthday with me deserves
+        its own memory.
+      </p>
+      <p>
+        I hope today brings you the kind of happiness that stays with you long after
+        the candles are gone. Thank you for being a beautiful part of my days. 🌷
+      </p>
+      <p class="signature">— Someone who really wanted to make today special ❤️</p>
     </div>
+  </section>
 
-    <p class="signature">Made with ❤️ especially for you</p>
-  </div>
-</section>
+  <section class="page section dark">
+    <div class="section-label">02 · Three little things</div>
+    <h2>Tap the hearts</h2>
+    <div class="heart-grid">
+      <button class="heart-card" data-title="Your smile" data-text="Somehow, it makes ordinary moments feel a little brighter. ✨">♡<span>One</span></button>
+      <button class="heart-card" data-title="Your presence" data-text="You don't always have to do anything. Just being there can make a day feel different. 🌙">♡<span>Two</span></button>
+      <button class="heart-card" data-title="Our first birthday" data-text="This is only the beginning of another memory we get to look back on someday. 🎂">♡<span>Three</span></button>
+    </div>
+  </section>
 
-<div class="modal hidden" id="modal">
-  <div class="modalBox">
-    <button class="close" id="close">×</button>
-    <div class="modalHeart">💖</div>
-    <h2 id="modalTitle"></h2>
-    <p id="modalText"></p>
+  <section class="page section">
+    <div class="section-label">03 · Our little memory</div>
+    <div class="memory">
+      <div class="photo-placeholder">📸<br><small>Your favorite photo goes here</small></div>
+      <div>
+        <div class="date">23 AUGUST · FIRST BIRTHDAY TOGETHER</div>
+        <h2>One day, one memory, one smile.</h2>
+        <p>Replace this section with your favorite memory, your first meeting story, or the moment you realized she was special.</p>
+        <button id="memoryReveal">Reveal a secret 💌</button>
+        <p id="secret" class="secret hidden">My secret? I was smiling while making this. 🥹❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page section night">
+    <div class="section-label">04 · Make a wish</div>
+    <div class="moon">🌙</div>
+    <h2>Close your eyes for a second.</h2>
+    <p>Make your birthday wish… then tap the button.</p>
+    <button id="wish">I made my wish ✨</button>
+    <div id="wishDone" class="wish-done hidden">May life give you countless reasons to smile. ❤️</div>
+  </section>
+
+  <section class="page final">
+    <div class="small">And finally…</div>
+    <h1>Happy Birthday ❤️</h1>
+    <p>May this be the first of many birthdays that become beautiful memories.</p>
+    <div class="cake">🎂</div>
+    <p class="footer">Made especially for you · 23 August 2026</p>
+  </section>
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-box">
+    <button id="close">×</button>
+    <div class="big-heart">♥</div>
+    <h2 id="mTitle"></h2>
+    <p id="mText"></p>
   </div>
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
