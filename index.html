@@ -7,34 +7,100 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="stars"></div><div id="hearts"></div>
+<div id="stars"></div>
 
+<section id="opening" class="screen opening">
+  <div class="opening-card">
+    <div class="heart-orbit">♥</div>
+    <div class="tiny">A little birthday surprise</div>
+    <h1>For Xaly ❤️</h1>
+    <p>There is something I made especially for you.<br>Take your time and enjoy every little part of it.</p>
+    <button id="open">Open your surprise ✨</button>
+    <div class="hint">Best viewed with sound on · tap gently</div>
+  </div>
+</section>
 
-  <section class="reveal section reasons">
-    <div class="tiny">08 · If I had to say it simply</div>
-    <div class="reason-box">
-      <div class="big-quote">“</div>
-      <p>You are my Jaan ❤️<br>My Zindagi 🧬<br>My Duniya 🌍<br>My Jahan 💞<br>My Skoon 🩷<br>My Shehzadi 💓<br>My Bacha 💝</p>
-      <div class="big-quote right">”</div>
-    </div>
-  </section>
+<main id="content" class="hidden">
 
-  
-<section class="reveal choice-section">
+<section class="screen hero">
+  <div class="hero-glow"></div>
+  <div class="tiny">23 · August · 2026</div>
+  <h1>Happy Birthday,<br><span>Xaly ❤️</span></h1>
+  <p>A little corner of the internet made just to celebrate you.</p>
+  <div class="scroll">SCROLL DOWN<br>↓</div>
+</section>
+
+<section class="section reveal">
+  <div class="tiny">01 · A letter for you</div>
+  <h2>Dear Jaan…</h2>
+  <div class="letter">
+    <div class="seal">♥</div>
+    <p class="names">Meri Jaan ❤️ · Meri Zindagi 🧬 · Meri Duniya 🌍 · Mera Jahan 💞</p>
+    <p>
+      Happy Birthday to someone who makes ordinary moments feel a little more special.
+      I hope today reminds you how loved, appreciated and precious you are.
+    </p>
+    <p>
+      You deserve happiness that feels peaceful, dreams that come true, people who value you,
+      and a year filled with beautiful memories.
+    </p>
+    <p>
+      Thank you for being you — for your smile, your kindness, your little ways of making
+      moments memorable, and simply for being such an important part of my life.
+    </p>
+    <p class="signature">Always wishing the best for you,<br>Haseeb ❤️</p>
+  </div>
+</section>
+
+<section class="photo-section reveal">
+  <div class="tiny">02 · Little memories</div>
+  <h2>Two moments, one beautiful feeling ❤️</h2>
+  <div class="gallery">
+    <figure class="photo">
+      <img src="photo1.jpg" alt="A special memory">
+      <figcaption>A moment worth keeping. 🤍</figcaption>
+    </figure>
+    <figure class="photo">
+      <img src="photo2.jpg" alt="Another special memory">
+      <figcaption>One of those little memories. ❤️</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section dark reveal">
+  <div class="tiny">03 · The person you are</div>
+  <h2>Things I appreciate about you</h2>
+  <div class="cards">
+    <button class="card" data-title="Your heart ❤️" data-text="Caring, loving and full of warmth.">♥<small>Your heart</small></button>
+    <button class="card" data-title="Your smile ✨" data-text="One of my favorite reasons to smile myself.">☺<small>Your smile</small></button>
+    <button class="card" data-title="Your loyalty 🤍" data-text="Something I genuinely value and appreciate.">∞<small>Your loyalty</small></button>
+    <button class="card" data-title="Your presence 🌙" data-text="You have a way of making ordinary moments feel special.">✦<small>Your presence</small></button>
+  </div>
+</section>
+
+<section class="section reasons reveal">
+  <div class="tiny">04 · If I had to say it simply</div>
+  <div class="reason-box">
+    <div class="big-quote">“</div>
+    <p>You are my Jaan ❤️<br>My Zindagi 🧬<br>My Duniya 🌍<br>My Jahan 💞<br>My Skoon 🩷<br>My Shehzadi 💓<br>My Bacha 💝</p>
+    <div class="big-quote right">”</div>
+  </div>
+</section>
+
+<section class="choice-section reveal">
   <div class="tiny">05 · One little question</div>
   <h2>Jaan, one honest answer… ❤️</h2>
   <p class="choice-sub">Do you promise to keep smiling, keep shining, and let me be a part of all your beautiful tomorrows? ❤️</p>
-
   <div class="choice-card">
     <div class="choice-buttons" id="choiceArea">
       <button id="yesBtn" class="choice-btn yes-btn">YES ❤️</button>
       <button id="noBtn" class="choice-btn no-btn">NO 🙈</button>
     </div>
-    <p id="choiceHint" class="choice-hint">Choose carefully, baby… 👀</p>
+    <p id="choiceHint" class="choice-hint">Choose carefully… 👀</p>
   </div>
 </section>
 
-<section class="reveal final-surprise-section" id="finalSurprise">
+<section class="section final-surprise-section reveal" id="finalSurprise">
   <div class="tiny">06 · One last thing</div>
   <div class="final-lock">♡</div>
   <h2>I knew you would say yes. ❤️</h2>
@@ -48,39 +114,23 @@
   </div>
 </section>
 
-<section class="reveal wish-section screen">
-    <div class="moon">🌙</div>
-    <div class="tiny">09 · Birthday wish</div>
-    <h2>Make a wish, baby...</h2>
-    <p>Close your eyes for a moment. Think of something your heart truly wants.</p>
-    <button id="wish">I made my wish ✨</button>
-    <div id="wishText" class="hidden wish-text">May Allah make your coming days beautiful, peaceful and full of reasons to smile. Ameen. 🤍</div>
-  </section>
+<section class="wish-section screen reveal">
+  <div class="moon">🌙</div>
+  <div class="tiny">07 · Birthday wish</div>
+  <h2>Make a wish…</h2>
+  <p>Close your eyes for a moment and think of something your heart truly wants.</p>
+  <button id="wish">I made my wish ✨</button>
+  <div id="wishText" class="hidden wish-text">May Allah make your coming days beautiful, peaceful and full of reasons to smile. Ameen. 🤍</div>
+</section>
 
-
-  <section class="reveal secret-section">
-    <div class="tiny">06 · You found the secret</div>
-    <div class="secret-card">
-      <div class="secret-icon">🔐</div>
-      <h2>Okay... one last secret.</h2>
-      <p>I could write a hundred more lines, but the simplest truth is this:</p>
-      <div class="secret-line">Your happiness matters to me. ❤️</div>
-      <button id="secretBtn">Open the last surprise ✨</button>
-      <div id="secretReveal" class="hidden secret-reveal">
-        <div class="mini-confetti">🎉 💗 ✨</div>
-        <p>Happy Birthday, Jaan. May your day be as lovely as the happiness you bring into the lives of people who care about you. 🤍</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="reveal final screen">
-    <div class="tiny">And one last thing...</div>
-    <h1>Happy Birthday,<br><span>Xaly ❤️</span></h1>
-    <p>You are precious, you are appreciated, and you deserve a beautiful year ahead.</p>
-    <div class="cake">🎂</div>
-    <button id="again">Read it again 💌</button>
-    <div class="tiny footer">Made with love · 23 August 2026</div>
-  </section>
+<section class="section final reveal">
+  <div class="tiny">And one last thing…</div>
+  <h1>Happy Birthday,<br><span>Xaly ❤️</span></h1>
+  <p>You are appreciated, you are precious, and you deserve a beautiful year ahead.</p>
+  <div class="cake">🎂</div>
+  <button id="again">Read it again 💌</button>
+  <div class="tiny footer">Made especially for you · 23 August 2026</div>
+</section>
 </main>
 
 <div id="modal" class="modal hidden">
@@ -91,6 +141,7 @@
     <p id="modalText"></p>
   </div>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
