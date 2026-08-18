@@ -44,3 +44,49 @@
 .secret-reveal{margin-top:25px;padding:22px;border-radius:20px;background:#ffffff0c;animation:pop .6s ease}
 .mini-confetti{font-size:28px;letter-spacing:8px;margin-bottom:10px}
 @keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.12)}30%{transform:scale(.98)}45%{transform:scale(1.08)}}
+
+/* Elegant simple birthday report */
+.report-section{min-height:100vh;padding:100px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 30%,#251426,#09050d 68%);position:relative;overflow:hidden}
+.simple-report{width:min(94vw,720px);margin-top:28px;padding:18px 22px;border:1px solid #ffffff18;border-radius:28px;background:linear-gradient(145deg,#ffffff0d,#ffffff05);box-shadow:0 25px 80px #0007;backdrop-filter:blur(12px);text-align:left}
+.report-line{display:flex;gap:18px;align-items:flex-start;padding:22px 8px;border-bottom:1px solid #ffffff12}
+.report-line:last-child{border-bottom:0}
+.report-line>span{font-size:25px;color:#e8a2c0;line-height:1}
+.report-line strong{font-family:Georgia,serif;font-size:20px;color:#fff}
+.report-line p{margin:7px 0 0;color:#d8ced7;font:15px Arial,sans-serif;line-height:1.65}
+@media(max-width:650px){.simple-report{padding:10px 17px}.report-line{padding:19px 3px;gap:14px}.report-line strong{font-size:18px}.report-line p{font-size:14px}}
+
+/* V6 interactive choice + final surprise */
+.choice-section{min-height:100vh;padding:100px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 35%,#29152b,#09050e 70%);overflow:hidden}
+.choice-sub{max-width:680px;color:#d8ced7;font:16px Arial,sans-serif;line-height:1.8;margin:8px auto 28px}
+.choice-card{width:min(94vw,680px);min-height:270px;padding:42px 20px;border:1px solid #ffffff16;border-radius:30px;background:#ffffff08;backdrop-filter:blur(14px);box-shadow:0 25px 80px #0007;position:relative;overflow:hidden}
+.choice-buttons{height:150px;position:relative;max-width:500px;margin:auto}
+.choice-btn{border:0;border-radius:999px;padding:15px 30px;font:bold 16px Arial,sans-serif;cursor:pointer;box-shadow:0 12px 30px #0005;transition:transform .25s ease,opacity .25s ease,box-shadow .25s ease}
+.yes-btn{background:linear-gradient(135deg,#e66a9c,#9b6ce0);color:#fff;position:absolute;left:20%;top:48px}
+.no-btn{background:#ffffff12;color:#eee;border:1px solid #ffffff18;position:absolute;right:20%;top:48px}
+.choice-btn:active{transform:scale(.94)}
+.choice-hint{color:#bdaebc;font:13px Arial,sans-serif;letter-spacing:.5px}
+.final-surprise-section{min-height:100vh;padding:100px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 45%,#32152d,#07040b 72%);overflow:hidden}
+.final-lock{width:88px;height:88px;border:1px solid #e7a3c2aa;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:42px;color:#f2bfd5;box-shadow:0 0 45px #d67ba533;margin:10px 0 25px;animation:pulseGlow 2.2s ease-in-out infinite}
+.final-tease{color:#cfc1cd;font:16px Arial,sans-serif;margin:0 0 24px}
+.reveal-final-btn{border:0;border-radius:999px;padding:15px 26px;color:#fff;background:linear-gradient(135deg,#c74c80,#8062d5);font:16px Arial,sans-serif;box-shadow:0 14px 35px #9d4c8c44}
+.last-message{width:min(92vw,720px);margin-top:28px;padding:34px 26px;border:1px solid #ffffff14;border-radius:28px;background:#ffffff08;backdrop-filter:blur(15px);box-shadow:0 25px 80px #0008;animation:messageIn .9s cubic-bezier(.2,.8,.2,1)}
+.last-message p{font:16px Arial,sans-serif;color:#e3d9e2;line-height:1.9;margin:0 0 18px}
+.last-message p:last-child{margin-bottom:0}
+.last-message .signature{font-family:Georgia,serif;color:#f0bdd3;font-size:19px}
+@keyframes pulseGlow{0%,100%{transform:scale(1);box-shadow:0 0 35px #d67ba522}50%{transform:scale(1.06);box-shadow:0 0 65px #d67ba566}}
+@keyframes messageIn{from{opacity:0;transform:translateY(30px) scale(.97)}to{opacity:1;transform:none}}
+@media(max-width:650px){
+  .choice-btn{padding:13px 24px;font-size:14px}
+  .yes-btn{left:10%}.no-btn{right:10%}
+  .choice-card{min-height:285px}
+  .last-message{padding:28px 20px}
+}
+
+.choice-btn.floating{
+  position:absolute!important;
+  transition:left .55s cubic-bezier(.2,.8,.2,1),top .55s cubic-bezier(.2,.8,.2,1),transform .4s ease!important;
+}
+.choice-hint.success{
+  color:#f1b9d1;
+  font-weight:bold;
+}

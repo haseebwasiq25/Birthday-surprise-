@@ -60,3 +60,106 @@ if(secretBtn){
     burst(45);
   });
 }
+
+
+/* V7 romantic floating YES/NO interaction */
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const choiceArea = document.getElementById("choiceArea");
+const choiceHint = document.getElementById("choiceHint");
+let yesMoves = 0;
+let noMoves = 0;
+let answered = false;
+
+function floatButton(btn, count){
+  if(!btn || !choiceArea) return;
+  btn.classList.add("floating");
+  const pad = 8;
+  const maxX = Math.max(pad, choiceArea.clientWidth - btn.offsetWidth - pad);
+  const maxY = Math.max(pad, choiceArea.clientHeight - btn.offsetHeight - pad);
+  const x = pad + Math.random() * Math.max(1, maxX - pad);
+  const y = pad + Math.random() * Math.max(1, maxY - pad);
+  btn.style.left = x + "px";
+  btn.style.right = "auto";
+  btn.style.top = y + "px";
+  btn.style.transform = "rotate(" + ((Math.random()*10)-5) + "deg) scale(1.04)";
+}
+
+if(yesBtn){
+  yesBtn.addEventListener("click", ()=>{
+    if(answered) return;
+    yesMoves++;
+    const yesHints = [
+      "Wait… I wasn't ready for that answer 😭❤️",
+      "Hehe, try the YES button again 👀",
+      "One more little try, baby 🥹",
+      "Almost there… ❤️",
+      "Okay… now you got me. ✨"
+    ];
+    if(yesMoves < 5){
+      floatButton(yesBtn, yesMoves);
+      choiceHint.textContent = yesHints[yesMoves-1];
+      burst(12);
+    } else {
+      answered = true;
+      yesBtn.classList.remove("floating");
+      yesBtn.style.position = "relative";
+      yesBtn.style.left = "auto";
+      yesBtn.style.top = "auto";
+      yesBtn.style.right = "auto";
+      yesBtn.style.transform = "scale(1.08)";
+      noBtn.style.opacity = ".25";
+      noBtn.style.pointerEvents = "none";
+      choiceHint.textContent = "I knew it. ❤️ Come see what I saved for you…";
+      choiceHint.classList.add("success");
+      burst(55);
+      setTimeout(()=>{
+        document.getElementById("finalSurprise")?.scrollIntoView({behavior:"smooth"});
+      }, 850);
+    }
+  });
+}
+
+if(noBtn){
+  noBtn.addEventListener("click", ()=>{
+    if(answered) return;
+    noMoves++;
+    const noHints = [
+      "Are you sure, baby? 👀",
+      "Think again… 🥹❤️",
+      "That answer doesn't look right 😂",
+      "Last few chances… ❤️",
+      "Okay, I'm keeping the YES for you 😭❤️"
+    ];
+    if(noMoves < 5){
+      floatButton(noBtn, noMoves);
+      choiceHint.textContent = noHints[noMoves-1];
+      burst(8);
+    } else {
+      noBtn.textContent = "YES ❤️";
+      noBtn.classList.add("floating");
+      noBtn.style.opacity = "1";
+      noBtn.style.background = "linear-gradient(135deg,#e66a9c,#9b6ce0)";
+      noBtn.style.color = "#fff";
+      noBtn.style.border = "0";
+      choiceHint.textContent = "Okay baby… I think we found your real answer. 😭❤️";
+      burst(18);
+      noBtn.onclick = ()=>{
+        answered = true;
+        noBtn.classList.remove("floating");
+        noBtn.style.position = "relative";
+        noBtn.style.left = "auto";
+        noBtn.style.top = "auto";
+        noBtn.style.right = "auto";
+        yesBtn.style.opacity = ".25";
+        yesBtn.style.pointerEvents = "none";
+        choiceHint.textContent = "I knew it. ❤️ Now for your final surprise…";
+        choiceHint.classList.add("success");
+        burst(60);
+        setTimeout(()=>{
+          document.getElementById("finalSurprise")?.scrollIntoView({behavior:"smooth"});
+        }, 850);
+      };
+    }
+  });
+}
